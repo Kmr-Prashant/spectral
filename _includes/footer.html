@@ -13,13 +13,11 @@
     {% endif %}
     {% endfor %}
   </ul>
-  <ul class="copyright">
-    <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
-    {% if site.first_published %}
-      {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
-      {% if diff contains '-' %}{{ site.first_published }},{% endif %}
-    {% endif %}
-    {{ thisyear }}
-    </li>
+  <ul class="copyright">{{ thisyear }}    
+    {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
+  	<li>PRASHANT KUMAR: <a href="http://html5up.net" target="_blank"></a></li>
+    <li>BLOG<a href="http://html5up.net" target="_blank"></a></li>
+    <li>PRODUCTS<a href="http://jekyllrb.com" target="_blank"></a></li>
+  	<li>CONTACT<a href="http://jekyllrb.com" target="_blank"></a></li>
   </ul>
 </footer>
